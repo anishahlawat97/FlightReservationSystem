@@ -140,7 +140,7 @@ public abstract class Ticket {
     }
 
     public void cancel(){
-        cancelled=false;
+        cancelled=true;
         System.out.println("Ticket has been cancelled");
     }
 

@@ -6,8 +6,8 @@ public class TouristTicket extends Ticket {
 
     private String touristHotelLocation;
     private String[] selectTouristLocation= new String[5];
-
     int n;
+
 
     public TouristTicket(String pnrNo, Flight flight, Passenger passenger, String departureLocation, String arrivalLocation, String departureDate, String arrivalDate, String departureTime, String arrivalTime, int seatNo, float price, boolean cancelled) {
         super(pnrNo, flight, passenger, departureLocation, arrivalLocation, departureDate, arrivalDate, departureTime, arrivalTime, seatNo, price, cancelled);
@@ -22,7 +22,7 @@ public class TouristTicket extends Ticket {
         this.touristHotelLocation = touristHotelLocation;
     }
 
-    public String[] getSelectTouristLocation() {
+    public String[] getTouristLocation() {
         return selectTouristLocation;
     }
 
@@ -51,7 +51,6 @@ public class TouristTicket extends Ticket {
             }
         }
         for(int i=0,j=0; i<n;i++){
-
                 if(i==index) {
                     continue;
                 }
@@ -59,14 +58,9 @@ public class TouristTicket extends Ticket {
                     newArray[j++] = selectTouristLocation[i];
                 }
         }
-        for(int i=0;i<n-1;i++){
-//            for(int j=0;j<n-1;j++){
-            System.out.println(newArray[i]);
-//            }
-
+        for(int i=0,j=0;i<n-1;i++){
+            selectTouristLocation[j++]=newArray[i];
+            System.out.println(selectTouristLocation[j]);
         }
-//        for(int i=0; i<n-1;i++){
-//            System.out.println(selectTouristLocation[i]);
-//        }
     }
 }

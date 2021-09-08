@@ -44,7 +44,7 @@ public class Flight {
     }
 
     public void updateSeats(){
-        if(checkAvailability()==true){
+        if(checkAvailability()){
             seatsBooked+=1;
         }
     }
